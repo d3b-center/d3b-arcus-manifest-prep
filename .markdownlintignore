@@ -1,4 +1,4 @@
 # Ignore Files for markdown linting
 
 CHANGELOG.md
-rdm-project-template/*/README.md <!--readme from arcus-->
+rdm-project-template/*
