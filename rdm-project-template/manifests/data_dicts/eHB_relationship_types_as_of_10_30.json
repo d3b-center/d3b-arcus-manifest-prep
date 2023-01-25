@@ -1,0 +1,377 @@
+[
+    {
+        "typ": "familial",
+        "id": 7,
+        "desc": "Surrogate-Fetus"
+    },
+    {
+        "typ": "familial",
+        "id": 8,
+        "desc": "Surrogate Mother"
+    },
+    {
+        "typ": "familial-aunt-uncle",
+        "id": 9,
+        "desc": "Paternal Uncle"
+    },
+    {
+        "typ": "familial-cousin",
+        "id": 10,
+        "desc": "Paternal Male First Cousin Once Removed"
+    },
+    {
+        "typ": "familial-cousin",
+        "id": 11,
+        "desc": "Paternal Male First Cousin"
+    },
+    {
+        "typ": "familial",
+        "id": 12,
+        "desc": "Paternal Half Uncle"
+    },
+    {
+        "typ": "familial-half-sibling",
+        "id": 13,
+        "desc": "Paternal Half Sister"
+    },
+    {
+        "typ": "familial",
+        "id": 15,
+        "desc": "Paternal Half Aunt"
+    },
+    {
+        "typ": "familial-half-sibling",
+        "id": 14,
+        "desc": "Paternal Half Brother"
+    },
+    {
+        "typ": "familial",
+        "id": 16,
+        "desc": "Paternal Half Uncle"
+    },
+    {
+        "typ": "familial-great-aunt-uncle",
+        "id": 17,
+        "desc": "Paternal Great Uncle"
+    },
+    {
+        "typ": "familial-grand-nephew-niece",
+        "id": 18,
+        "desc": "Paternal Great Niece"
+    },
+    {
+        "typ": "familial-grand-nephew-niece",
+        "id": 19,
+        "desc": "Paternal Great Nephew"
+    },
+    {
+        "typ": "familial",
+        "id": 20,
+        "desc": "Paternal Great Grandniece"
+    },
+    {
+        "typ": "familial",
+        "id": 21,
+        "desc": "Paternal Great Grandnephew"
+    },
+    {
+        "typ": "familial",
+        "id": 22,
+        "desc": "Paternal Great Grandmother"
+    },
+    {
+        "typ": "familial",
+        "id": 23,
+        "desc": "Paternal Great Grandfather"
+    },
+    {
+        "typ": "familial-great-aunt-uncle",
+        "id": 24,
+        "desc": "Paternal Great Aunt"
+    },
+    {
+        "typ": "familial-grandparent",
+        "id": 25,
+        "desc": "Paternal Grandmother"
+    },
+    {
+        "typ": "familial-grandparent",
+        "id": 26,
+        "desc": "Paternal Grandfather"
+    },
+    {
+        "typ": "familial-cousin",
+        "id": 27,
+        "desc": "Paternal Female First Cousin Once Removed"
+    },
+    {
+        "typ": "familial-cousin",
+        "id": 28,
+        "desc": "Paternal Female First Cousin"
+    },
+    {
+        "typ": "familial-aunt-uncle",
+        "id": 29,
+        "desc": "Paternal Aunt"
+    },
+    {
+        "typ": "familial",
+        "id": 30,
+        "desc": "Other"
+    },
+    {
+        "typ": "familial-aunt-uncle",
+        "id": 31,
+        "desc": "Maternal Uncle"
+    },
+    {
+        "typ": "familial-cousin",
+        "id": 32,
+        "desc": "Maternal Male First Cousin Once Removed"
+    },
+    {
+        "typ": "familial-cousin",
+        "id": 33,
+        "desc": "Maternal Male First Cousin"
+    },
+    {
+        "typ": "familial",
+        "id": 34,
+        "desc": "Maternal Half Aunt"
+    },
+    {
+        "typ": "familial",
+        "id": 35,
+        "desc": "Maternal Half Uncle"
+    },
+    {
+        "typ": "familial-half-sibling",
+        "id": 36,
+        "desc": "Maternal Half Sister"
+    },
+    {
+        "typ": "familial-half-sibling",
+        "id": 37,
+        "desc": "Maternal Half Brother"
+    },
+    {
+        "typ": "familial",
+        "id": 38,
+        "desc": "Maternal Great Uncle"
+    },
+    {
+        "typ": "familial",
+        "id": 39,
+        "desc": "Maternal Great Niece"
+    },
+    {
+        "typ": "familial",
+        "id": 40,
+        "desc": "Maternal Great Nephew"
+    },
+    {
+        "typ": "familial",
+        "id": 41,
+        "desc": "Maternal Great Grandniece"
+    },
+    {
+        "typ": "familial",
+        "id": 42,
+        "desc": "Maternal Great Grandnephew"
+    },
+    {
+        "typ": "familial",
+        "id": 43,
+        "desc": "Maternal Great Grandmother"
+    },
+    {
+        "typ": "familial",
+        "id": 44,
+        "desc": "Maternal Great Grandfather"
+    },
+    {
+        "typ": "familial-great-aunt-uncle",
+        "id": 45,
+        "desc": "Maternal Great Aunt"
+    },
+    {
+        "typ": "familial-grandparent",
+        "id": 46,
+        "desc": "Maternal Grandmother"
+    },
+    {
+        "typ": "familial-grandparent",
+        "id": 47,
+        "desc": "Maternal Grandfather"
+    },
+    {
+        "typ": "familial-cousin",
+        "id": 48,
+        "desc": "Maternal Female First Cousin Once Removed"
+    },
+    {
+        "typ": "familial-aunt-uncle",
+        "id": 50,
+        "desc": "Maternal Aunt"
+    },
+    {
+        "typ": "familial",
+        "id": 51,
+        "desc": "Great Grandson"
+    },
+    {
+        "typ": "familial",
+        "id": 52,
+        "desc": "Great Granddaughter"
+    },
+    {
+        "typ": "familial-grandchild",
+        "id": 53,
+        "desc": "Grandson"
+    },
+    {
+        "typ": "familial-grandchild",
+        "id": 54,
+        "desc": "Granddaughter"
+    },
+    {
+        "typ": "familial-grand-nephew-niece",
+        "id": 55,
+        "desc": "Grand Niece"
+    },
+    {
+        "typ": "familial-grand-nephew-niece",
+        "id": 56,
+        "desc": "Grand Nephew"
+    },
+    {
+        "typ": "familial",
+        "id": 57,
+        "desc": "Genetic-Fetus"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 58,
+        "desc": "Full Sister"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 59,
+        "desc": "Full Brother"
+    },
+    {
+        "typ": "familial",
+        "id": 60,
+        "desc": "Donor-Sperm"
+    },
+    {
+        "typ": "familial",
+        "id": 61,
+        "desc": "Donor-egg"
+    },
+    {
+        "typ": "familial-nephew-niece",
+        "id": 63,
+        "desc": "Biological Half Niece"
+    },
+    {
+        "typ": "familial-nephew-niece",
+        "id": 64,
+        "desc": "Biological Half Nephew"
+    },
+    {
+        "typ": "familial-nephew-niece",
+        "id": 65,
+        "desc": "Biological Full Niece"
+    },
+    {
+        "typ": "familial-nephew-niece",
+        "id": 66,
+        "desc": "Biological Full Nephew"
+    },
+    {
+        "typ": "familial-parent",
+        "id": 67,
+        "desc": "Biological Father"
+    },
+    {
+        "typ": "familial-child",
+        "id": 68,
+        "desc": "Biological Daughter"
+    },
+    {
+        "typ": "familial-parent",
+        "id": 62,
+        "desc": "Biological Mother"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 69,
+        "desc": "Twin Sister"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 70,
+        "desc": "Twin Brother"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 71,
+        "desc": "Triplet Sister"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 72,
+        "desc": "Triplet Brother"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 73,
+        "desc": "Quadruplet Sister"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 74,
+        "desc": "Quadruplet Brother"
+    },
+    {
+        "typ": "familial-child",
+        "id": 75,
+        "desc": "Biological Son"
+    },
+    {
+        "typ": "familial-cousin",
+        "id": 49,
+        "desc": "Maternal Female First Cousin"
+    },
+    {
+        "typ": "familial-child",
+        "id": 78,
+        "desc": "Biological Child"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 79,
+        "desc": "Biological Sibling"
+    },
+    {
+        "typ": "familial-child",
+        "id": 77,
+        "desc": "Non-Affected Twin Fetus"
+    },
+    {
+        "typ": "familial-child",
+        "id": 76,
+        "desc": "Affected Twin Fetus"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 80,
+        "desc": "Dizygotic Twin"
+    },
+    {
+        "typ": "familial-sibling",
+        "id": 81,
+        "desc": "Monozygotic Twin"
+    }
+]

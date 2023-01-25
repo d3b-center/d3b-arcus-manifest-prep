@@ -1,0 +1,3 @@
+column,definition,type
+destination_file_group,The files in this file group is derived from source_file_group.,String 
+source_file_group,File group used to derive the destination_file_group.,String
