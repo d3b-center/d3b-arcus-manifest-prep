@@ -35,8 +35,10 @@ For development, the unzipped manifest can be found at [`data/submission_packet`
 
 ### Releases
 
-This repo is setup to take advantage of the [d3b-release-maker](https://github.com/d3b-center/d3b-release-maker/). Please follow the instructions there to build releases.
+This repo is setup to take advantage of the [d3b-release-maker](https://github.com/d3b-center/d3b-release-maker/).
+Please follow the instructions there to build releases.
 
 ### Linting
 
-This repo is setup to take advantage of the [Github Super Linter](https://github.com/marketplace/actions/super-linter). Of note are the markdownlint files and the pyproject.toml.
+This repo is setup to take advantage of the [Github Super Linter](https://github.com/marketplace/actions/super-linter).
+Of note are the markdownlint files and the pyproject.toml.
