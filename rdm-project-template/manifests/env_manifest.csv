@@ -1,0 +1,8 @@
+programming_filegroup,related_environment
+src/,entire-lab_env.yaml
+data/interim/,entire-lab_env.yaml
+models/,entire-lab_env.yaml
+models/model1.h5,model1_env.txt
+models/model2.h6,model2_env.txt
+src/scripts/python,python_env.yaml
+src/notbooks,notebooks_env.txt

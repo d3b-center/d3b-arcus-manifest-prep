@@ -1,4 +1,4 @@
 {
-  "project_title": "d3b-python-template-repo",
-  "pre_release_script": ""
+  "project_title": "d3b Arcus Manifest Prep",
+  "pre_release_script": "scripts/prerelease.sh"
 }

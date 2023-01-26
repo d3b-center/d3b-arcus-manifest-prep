@@ -1,3 +1,4 @@
 # Ignore Files for markdown linting
 
 CHANGELOG.md
+rdm-project-template/*

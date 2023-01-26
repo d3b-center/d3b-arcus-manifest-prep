@@ -1,0 +1,4 @@
+column,defintion,type
+local_participant_id,The local id of a participant.,String
+local_relative_id,The local id of a relative to the participant.,String
+relative_family_role,"The familial relationship of the relative to the participant. Use terms from eHB_relationship_types_as_of_10_30.json.",String

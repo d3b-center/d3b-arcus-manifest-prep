@@ -1,0 +1,5 @@
+column,definition,type,notes
+local_id_type,The type of participant id (local).,String,This will always be local.
+local_participant_id,Id that is used in PARTICIPANT_MANIFEST,String,
+auth_id_type,The type of participant id(chop),String,This will always be chop.
+auth_participant_id,Authorative Id of the participant. (Often MRN),String,Use an 8 digit MRN. Left-pad the MRN with zeroes as necessary.

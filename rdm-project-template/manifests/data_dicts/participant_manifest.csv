@@ -1,0 +1,6 @@
+column,definition,type
+local_participant_id,"This ID uniquely defined a person, and can be linked to an MRN.",String
+cohort,"Use this column to group participants into cohorts that will be cwmpared (For example, case vs healthy control).",String
+biosample_id,"Ideally, this ID can link to the CHOP biobank. When this is not possible, use the sample ID from your project.",String
+family_id,"When participants are related, use family_id to group related participants. With trios or duos, the proband ID is often used.",String
+family_role,"Use a term from eHB_relationship_types_as_of_10_30.json to indicate mother, father, proband, sister, etc..",String

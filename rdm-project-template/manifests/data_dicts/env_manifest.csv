@@ -1,0 +1,2 @@
+programming_filegroup,"Enter the highest level folder that the environment file relates to. If the file relates to an entire directory, then put the whole direcotry file path.  If the file relates to a suddirectory, enter that filepath. If it relates to a single file, enter the file path and filename."
+related_environment,Enter the environment filename.  Some environment files will be entered multiple times as they relate to multiple files.
