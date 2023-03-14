@@ -9,3 +9,6 @@ The --contrib flag is required and is used to specify the top-level folder locat
 file_manifest.csv
 participant_manifest.csv
 participant-crosswalk.txt
+
+
+This binary is no longer used internally by Arcus (they have switched to using Github Actions for validation) but the expectation is that it still runs effectively. Contact Nicole Feldman or the Arcus LS team with any questions or issues.
