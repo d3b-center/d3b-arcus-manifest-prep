@@ -20,15 +20,23 @@ verbose = 1
 ## Or run 'sqlfluff dialects'
 dialect = postgres
 ## One of [raw|jinja|python|placeholder]
-#templater = jinja
+#templater = dbt
 ## Comma separated list of rules to check, or None for all
 #rules = None
 ## Comma separated list of rules to exclude, or None
-#exclude_rules = None
+## L009: require trailing newline
+## L033: ambiguous union: UNION [DISTINCT|ALL] is preferred over just UNION.
+## L031: forbid aliasing tables
+## L037: ambiguos order by. prefer 'ORDER BY a ASC, b DESC' instead of 
+##       `ORDER BY a,b DESC `
+## L027: force qualified references
+## L034: column order - select *, then columns, then calculations and aggregates
+## L051: require fully qualified joins
+exclude_rules = L009,L033,L031,L037,L027,L034, L051
 ## The depth to recursively parse to (0 for unlimited)
 #recurse = 0
 ## Below controls SQLFluff output, see max_line_length for SQL output
-#output_line_length = 80
+output_line_length = 80
 ## Number of passes to run before admitting defeat
 #runaway_limit = 10
 ## Ignore errors by category (one or more of the following, separated by commas: lexing,linting,parsing,templating)
@@ -72,6 +80,12 @@ dialect = postgres
 #unquoted_identifiers_policy = all
 
 ## Some rules have their own specific config
+[sqlfluff:rules:L002]
+tab_space_size = 2
+
+[sqlfluff:rules:L003]
+tab_space_size = 2
+
 [sqlfluff:rules:L007]
 #operator_new_lines = after
 
@@ -91,7 +105,7 @@ capitalisation_policy = consistent
 
 [sqlfluff:rules:L014]
 ## Unquoted identifiers
-extended_capitalisation_policy = consistent
+capitalisation_policy = lower
 ## Comma separated list of words to ignore for this rule
 #ignore_words = None
 
