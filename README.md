@@ -10,6 +10,9 @@
 
 Tool to generate manifests for ARCUS for the CBTN CHOP patient data transfer.
 
+See the [Design Overview](docs/design_overview.md) for a discussion on how the
+manifests are created and how to use the tool to generate manifests.
+
 ## Installation
 
 ### Install latest release
