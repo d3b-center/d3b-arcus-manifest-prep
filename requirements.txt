@@ -2,6 +2,7 @@ d3b_cavatica_tools @ git+https://github.com/d3b-center/d3b-cavatica-python-tools
 boto3
 pandas
 tqdm
-psycopg2-binary
+psycopg2-binary # ! Deprecated, replaced with sqlalchemy
+sqlalchemy
 click
 openpyxl
