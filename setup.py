@@ -25,8 +25,7 @@ setup(
     packages=find_packages(),
     entry_points={
         "console_scripts": [
-            # ! Update this with the correct entrypoint
-            "cds = cds.scripts.cli:cds",
+            "arcus_manifests = arcus_manifests.scripts.cli:arcus_manifests",
         ],
     },
     python_requires=">=3.6, <4",
