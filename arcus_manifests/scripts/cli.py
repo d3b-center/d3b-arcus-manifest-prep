@@ -76,6 +76,13 @@ def arcus_manifests(ctx, postgres_connection_url, submission_packager_dir):
     + "use to generate the manifests.",
 )
 @click.option(
+    "-m",
+    "--mrn_map_file",
+    type=click.Path(exists=True, dir_okay=False),
+    required=True,
+    help="CSV file that maps research IDs (C-IDs) to MRNs.",
+)
+@click.option(
     "-g",
     "--table_to_generate",
     "generator",
@@ -88,7 +95,7 @@ def arcus_manifests(ctx, postgres_connection_url, submission_packager_dir):
     show_default=True,
 )
 @click.pass_context
-def generate_submission(ctx, seed_file, generator):
+def generate_submission(ctx, seed_file, mrn_map_file, generator):
     """
     Generate an ARCUS submission manifest or manifests using a seed
     file_sample_participant mapping.
@@ -97,6 +104,7 @@ def generate_submission(ctx, seed_file, generator):
         ctx.obj["postgres_connection_url"],
         ctx.obj["submission_packager_dir"],
         seed_file,
+        mrn_map_file,
         generator,
     )
 
