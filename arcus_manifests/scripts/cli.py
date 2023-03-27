@@ -106,7 +106,7 @@ def generate_submission(ctx, seed_file, generator):
 def qc_submission(ctx):
     """QC an ARCUS Submission Package"""
     qc_submission_package(
-        ctx.obj["postgres_connection_url"], ctx.obj["submission_packager_dir"]
+        # ctx.obj["postgres_connection_url"], ctx.obj["submission_packager_dir"]
     )
 
 
