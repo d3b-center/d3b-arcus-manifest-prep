@@ -1,5 +1,5 @@
 """
-Copies contents of prd dataservice to local dataservice for a particular study
+Builds Arcus submission package
 """
 from arcus_manifests.common.constants import (
     ALL_GENERATOR_LIST,
