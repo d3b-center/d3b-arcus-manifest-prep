@@ -1,3 +1,7 @@
+"""
+Constants and defaults for building manifests
+"""
+
 SUBMISSION_PACKAGE_DIR_DEFAULT = "data/submission_packet/"
 
 ALL_GENERATOR_LIST = [

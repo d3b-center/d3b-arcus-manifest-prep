@@ -1,3 +1,8 @@
+"""
+Functions used to standardize and regularize output of manifests
+"""
+
+
 def order_columns(manifest, columns):
     """order columns in the manifest
 
