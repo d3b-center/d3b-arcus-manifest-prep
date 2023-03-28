@@ -39,6 +39,19 @@ def validate_mrn(mrn, warn_only=False):
 def build_participant_crosswalk_table(
     participant_list, mrn_map, submission_package_dir, allow_unvalidated_mrn
 ):
+    """Build the Participant Crosswalk Table
+
+    :param participant_list: Participants to put in the manifest
+    :type participant_list: list
+    :param mrn_map: mapping between research ID and MRN
+    :type mrn_map: pandas.DataFrame
+    :param submission_package_dir: directory to save the output manifest
+    :type submission_package_dir: str
+    :param allow_unvalidated_mrn: Should unvalidated MRNs be allowed?
+    :type allow_unvalidated_mrn: boolean
+    :return: participant crosswalk table
+    :rtype: pandas.DataFrame
+    """
     logger.info("Building Participant Crosswalk Table")
     column_order = [
         "local_id_type",

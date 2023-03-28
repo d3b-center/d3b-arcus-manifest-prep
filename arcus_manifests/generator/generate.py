@@ -21,6 +21,23 @@ def generate_submission_package(
     allow_unvalidated_mrn,
     generator_list,
 ):
+    """Generate a submission package
+
+    Generate all the specified files in the arcus submission package.
+
+    :param postgres_connection_url: database url
+    :type postgres_connection_url: str
+    :param submission_package_dir: directory to save the output manifest
+    :type submission_package_dir: str
+    :param seed_file: file mapping files to participants and samples
+    :type seed_file: str
+    :param mrn_map_file: file mapping research IDs to MRNs
+    :type mrn_map_file: str
+    :param allow_unvalidated_mrn: Should unvalidated MRNs be allowed?
+    :type allow_unvalidated_mrn: boolean
+    :param generator_list: manifests to generate
+    :type generator_list: str or list
+    """
     if "all" in generator_list:
         logger.info("Generating all manifests in submission packet")
         generator_list = ALL_GENERATOR_LIST
