@@ -83,6 +83,17 @@ def arcus_manifests(ctx, postgres_connection_url, submission_packager_dir):
     help="CSV file that maps research IDs (C-IDs) to MRNs.",
 )
 @click.option(
+    "-u",
+    "--allow_unvalidated_mrn",
+    is_flag=True,
+    default=False,
+    show_default=True,
+    type=click.Path(exists=True, dir_okay=False),
+    help="Flag. Should MRNs that do not pass validation be allowed. "
+    "If True, when an mrn fails validation, a warning is shown and execution "
+    "continues. By default, when MRNs fail validation, execution is halted.",
+)
+@click.option(
     "-g",
     "--table_to_generate",
     "generator",
@@ -95,7 +106,9 @@ def arcus_manifests(ctx, postgres_connection_url, submission_packager_dir):
     show_default=True,
 )
 @click.pass_context
-def generate_submission(ctx, seed_file, mrn_map_file, generator):
+def generate_submission(
+    ctx, seed_file, mrn_map_file, allow_unvalidated_mrn, generator
+):
     """
     Generate an ARCUS submission manifest or manifests using a seed
     file_sample_participant mapping.
@@ -105,6 +118,7 @@ def generate_submission(ctx, seed_file, mrn_map_file, generator):
         ctx.obj["submission_packager_dir"],
         seed_file,
         mrn_map_file,
+        allow_unvalidated_mrn,
         generator,
     )
 

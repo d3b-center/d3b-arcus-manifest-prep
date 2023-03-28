@@ -18,6 +18,7 @@ def generate_submission_package(
     submission_package_dir,
     seed_file,
     mrn_map_file,
+    allow_unvalidated_mrn,
     generator_list,
 ):
     if "all" in generator_list:
@@ -53,7 +54,10 @@ def generate_submission_package(
         )
     if "participant_crosswalk" in generator_list:
         build_participant_crosswalk_table(
-            participant_list, mrn_map, submission_package_dir
+            participant_list,
+            mrn_map,
+            submission_package_dir,
+            allow_unvalidated_mrn,
         )
 
     if "file" in generator_list:
