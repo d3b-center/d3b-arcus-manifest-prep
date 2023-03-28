@@ -28,7 +28,8 @@ def build_file_table(db_url, file_list, submission_package_dir):
         "file_type",
         "protocol",
         "file_path",
-        "file_groups",
+        "file_group",
+        "derived_from_file_group",
     ]
     logger.info("connecting to database")
     conn = psycopg2.connect(db_url)
@@ -36,7 +37,9 @@ def build_file_table(db_url, file_list, submission_package_dir):
     logger.info("Querying for manifest of files")
     file_table = pd.read_sql(file_query(file_list), conn)
     # Set the column order and sort on key column
-    file_table = order_columns(file_table, column_order).sort_values("file_id")
+    file_table = order_columns(file_table, column_order).sort_values(
+        "file_path"
+    )
     logger.info("saving file manifest to file")
     file_table.to_csv(
         f"{submission_package_dir}/file_manifest.csv", index=False
