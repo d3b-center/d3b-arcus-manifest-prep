@@ -17,6 +17,6 @@ def build_participant_table(
     ).sort_values(["local_participant_id", "biosample_id"])
     logger.info("Saving participant table to file")
     participant_table.to_csv(
-        f"{submission_package_dir}/participant-crosswalk.txt", index=False
+        f"{submission_package_dir}/participant_manifest.csv", index=False
     )
     return participant_table
