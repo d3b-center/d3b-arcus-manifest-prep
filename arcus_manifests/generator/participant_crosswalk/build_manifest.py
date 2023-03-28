@@ -17,7 +17,7 @@ def validate_mrn(mrn):
     :return: zero-padded, 8 character-long MRN
     :rtype: str
     """
-    if not isinstance(mrn, int) or mrn.isdigit():
+    if not (isinstance(mrn, int) or mrn.isdigit()):
         raise ValueError("MRN must be coercible to integer")
     if len(str(mrn)) > 8:
         raise ValueError("MRNs cannot be longer than 8 characters")
