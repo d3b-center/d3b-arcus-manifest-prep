@@ -36,9 +36,6 @@ def generate_submission_package(
     participant_list = (
         file_sample_participant_map["research_id"].drop_duplicates().to_list()
     )
-    # sample_list = (
-    #     file_sample_participant_map["sample_id"].drop_duplicates().to_list()
-    # )
     file_list = (
         file_sample_participant_map["genomic_file_id"]
         .drop_duplicates()
@@ -59,7 +56,6 @@ def generate_submission_package(
             submission_package_dir,
             allow_unvalidated_mrn,
         )
-
     if "file" in generator_list:
         build_file_table(
             postgres_connection_url, file_list, submission_package_dir
