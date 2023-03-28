@@ -5,12 +5,14 @@ from d3b_cavatica_tools.utils.logging import get_logger
 logger = get_logger(__name__, testing_mode=False)
 
 
-def validate_mrn(mrn):
+def validate_mrn(mrn, warn_only=False):
     """Validate MRNs
 
     Validates that the MRN can be coerced to be integer and that the mrn is no
     greater than 8 characters long, Returned MRN is zero-padded to be 8
-    characters long
+    characters long.
+
+    If warn_only = True, MRNs that do not pass validation are returned as is.
 
     :param mrn: an MRN
     :type mrn: str or int
@@ -18,14 +20,24 @@ def validate_mrn(mrn):
     :rtype: str
     """
     if not (isinstance(mrn, int) or mrn.isdigit()):
-        raise ValueError("MRN must be coercible to integer")
+        if warn_only:
+            logger.warning(f"MRN should be coercible to integer. mrn: {mrn}")
+        else:
+            raise ValueError("MRN must be coercible to integer. mrn: {mrn}")
     if len(str(mrn)) > 8:
-        raise ValueError("MRNs cannot be longer than 8 characters")
+        if warn_only:
+            logger.warning(
+                f"MRN should not be longer than 8 characters. mrn: {mrn}"
+            )
+        else:
+            raise ValueError(
+                "MRNs cannot be longer than 8 characters. mrn: {mrn}"
+            )
     return f"{int(mrn):08}"
 
 
 def build_participant_crosswalk_table(
-    participant_list, mrn_map, submission_package_dir
+    participant_list, mrn_map, submission_package_dir, allow_unvalidated_mrn
 ):
     logger.info("Building Participant Crosswalk Table")
     column_order = [
@@ -35,7 +47,9 @@ def build_participant_crosswalk_table(
         "auth_participant_id",
     ]
     participant_mrn_map = mrn_map[mrn_map["research_id"].isin(participant_list)]
-    participant_mrn_map["mrn"] = participant_mrn_map["mrn"].apply(validate_mrn)
+    participant_mrn_map["mrn"] = participant_mrn_map["mrn"].apply(
+        validate_mrn, allow_unvalidated_mrn
+    )
     participant_mrn_map = participant_mrn_map.rename(
         columns={
             "research_id": "local_participant_id",
