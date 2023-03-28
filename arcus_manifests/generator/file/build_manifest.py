@@ -38,5 +38,7 @@ def build_file_table(db_url, file_list, submission_package_dir):
     # Set the column order and sort on key column
     file_table = order_columns(file_table, column_order).sort_values("file_id")
     logger.info("saving file manifest to file")
-    file_table.to_csv(f"{submission_package_dir}/file.csv", index=False)
+    file_table.to_csv(
+        f"{submission_package_dir}/file_manifest.csv", index=False
+    )
     return file_table
