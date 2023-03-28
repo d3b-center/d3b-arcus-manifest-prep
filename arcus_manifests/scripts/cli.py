@@ -88,7 +88,6 @@ def arcus_manifests(ctx, postgres_connection_url, submission_packager_dir):
     is_flag=True,
     default=False,
     show_default=True,
-    type=click.Path(exists=True, dir_okay=False),
     help="Flag. Should MRNs that do not pass validation be allowed. "
     "If True, when an mrn fails validation, a warning is shown and execution "
     "continues. By default, when MRNs fail validation, execution is halted.",

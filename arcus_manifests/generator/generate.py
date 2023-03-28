@@ -56,7 +56,7 @@ def generate_submission_package(
             submission_package_dir,
             allow_unvalidated_mrn,
         )
-    if "file" in generator_list:
+    if "file_manifest" in generator_list:
         build_file_table(
             postgres_connection_url, file_list, submission_package_dir
         )

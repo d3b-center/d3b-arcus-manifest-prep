@@ -11,7 +11,12 @@ def build_participant_table(
     logger.info("Building Participant Table")
     column_order = ["local_participant_id", "cohort", "biosample_id"]
     file_sample_participant_map["cohort"] = "CBTN"
-    participant_table = file_sample_participant_map[column_order]
+    participant_table = file_sample_participant_map.rename(
+        columns={
+            "research_id": "local_participant_id",
+            "aliquot_id": "biosample_id",
+        }
+    )[column_order]
     participant_table = order_columns(
         participant_table, column_order
     ).sort_values(["local_participant_id", "biosample_id"])

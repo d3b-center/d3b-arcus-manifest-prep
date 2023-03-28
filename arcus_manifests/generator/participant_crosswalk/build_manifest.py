@@ -23,7 +23,7 @@ def validate_mrn(mrn, warn_only=False):
         if warn_only:
             logger.warning(f"MRN should be coercible to integer. mrn: {mrn}")
         else:
-            raise ValueError("MRN must be coercible to integer. mrn: {mrn}")
+            raise ValueError(f"MRN must be coercible to integer. mrn: {mrn}")
     if len(str(mrn)) > 8:
         if warn_only:
             logger.warning(
@@ -31,9 +31,9 @@ def validate_mrn(mrn, warn_only=False):
             )
         else:
             raise ValueError(
-                "MRNs cannot be longer than 8 characters. mrn: {mrn}"
+                f"MRNs cannot be longer than 8 characters. mrn: {mrn}"
             )
-    return f"{int(mrn):08}"
+    return f"{str(mrn).zfill(8)}"
 
 
 def build_participant_crosswalk_table(
@@ -48,7 +48,7 @@ def build_participant_crosswalk_table(
     ]
     participant_mrn_map = mrn_map[mrn_map["research_id"].isin(participant_list)]
     participant_mrn_map["mrn"] = participant_mrn_map["mrn"].apply(
-        validate_mrn, allow_unvalidated_mrn
+        validate_mrn, warn_only=allow_unvalidated_mrn
     )
     participant_mrn_map = participant_mrn_map.rename(
         columns={
