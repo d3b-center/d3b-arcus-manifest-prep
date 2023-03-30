@@ -126,7 +126,9 @@ def generate_submission(
 @click.pass_context
 def qc_submission(ctx):
     """QC an ARCUS Submission Package"""
-    qc_submission_package(ctx.obj["submission_packager_dir"])
+    qc_submission_package(
+        ctx.obj["postgres_connection_url"], ctx.obj["submission_packager_dir"]
+    )
 
 
 if __name__ == "__main__":

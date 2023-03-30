@@ -8,9 +8,11 @@ from d3b_cavatica_tools.utils.logging import get_logger
 logger = get_logger(__name__, testing_mode=False)
 
 
-def qc_submission_package(submission_packager_dir):
+def qc_submission_package(db_url, submission_packager_dir):
     """QC A submission Package
 
+    :param db_url: database url
+    :type db_url: str
     :param submission_packager_dir: directory to load the manifests from
     :type submission_packager_dir: str
     """
@@ -54,6 +56,7 @@ def qc_submission_package(submission_packager_dir):
 
     # run QC
     participant_qc_dict = qc_participants(
+        db_url,
         participant_list_fsp,
         participant_list_participant_manifest,
         participant_list_crosswalk,
